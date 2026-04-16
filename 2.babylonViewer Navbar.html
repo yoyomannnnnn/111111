@@ -18,6 +18,11 @@
 		function loadit(modelUrl) {
 			if(modelUrl) {
 				let viewer = BabylonViewer.viewerManager.getViewerById('viewerID');
+				let temp = viewer.templateManager.getTemplate('navBar');
+				let param= temp._configuration;
+				param.params.hideVr=false;
+                param.params.disableOnFullscreen=true;
+				temp.updateParams(param);
 				viewer.loadModel(modelUrl)
 			}
 		}
@@ -28,10 +33,10 @@
 	<option value="">select model</option>
 	<option value="./models/alice.glb">Alice</option>
 	<option value="./models/Astronaut.glb">Astronaut</option>
-	<option value="./models/stacy_lightweight.glb">Stacy</option>
+	<option value="./models/buddha.glb">Buddha</option>
 </select>
 <div class='viewerContainer'>
-	<babylon id="viewerID"></babylon>
+	<babylon id="viewerID"><vr></vr></babylon>
 </div>
 </body>
 

@@ -1,43 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>BabylonJS Viewer - Basic usage</title>
-        <style>
-			.viewerContainer {
-                width: 400px;
-                height: 500px;				
-				image-rendering: pixelated; /* to prevent blury when zoomed out */
-			}
+hello MyFriend
+<hr/>
+<a href="sketchfab.html">SketchFab Example</a> <br/>
 
-        </style>
-		<script src="https://cdn.babylonjs.com/viewer/babylon.viewer.js"></script>
-	<script>
-		function loadit(modelUrl) {
-			if(modelUrl) {
-				let viewer = BabylonViewer.viewerManager.getViewerById('viewerID');
-				let temp = viewer.templateManager.getTemplate('navBar');
-				let param= temp._configuration;
-				param.params.hideVr=false;
-                param.params.disableOnFullscreen=true;
-				temp.updateParams(param);
-				viewer.loadModel(modelUrl)
-			}
-		}
-	</script>
-</head>
-<body>
-<select onchange="loadit(this.value)">
-	<option value="">select model</option>
-	<option value="./models/alice.glb">Alice</option>
-	<option value="./models/Astronaut.glb">Astronaut</option>
-	<option value="./models/buddha.glb">Buddha</option>
-</select>
-<div class='viewerContainer'>
-	<babylon id="viewerID"><vr></vr></babylon>
-</div>
-</body>
+<p>
+<a href="0.babylonViewer Basic.html">Babylon Viewer Basic</a>
+</p>
 
-</html>
+<p>
+<a href="1.babylonViewer Select.html">Babylon Viewer Select</a>
+</p>
+
+<a href="2.babylonViewer Navbar.html">Babylon Viewer Navbar</a>
+<hr/>
+<!--
+<p>
+<a href="./webAR">WebAR 範例</a>
+</p>
+-->
+
